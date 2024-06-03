@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Calculadora de Año Bisiesto</h2>
+        <label for="yearInput">Ingrese el año:</label>
+        <input type="number" id="yearInput" placeholder="Ingrese el año">
+        <button onclick="checkLeapYear()">Comprobar</button>
+        <p id="leapYearResult"></p>
+
+        <h2>Calculadora</h2>
+        <label for="operation">Operación:</label>
+        <select id="operation">
+            <option value="sumar">Sumar</option>
+            <option value="restar">Restar</option>
+            <option value="multiplicar">Multiplicar</option>
+            <option value="dividir">Dividir</option>
+            <option value="exponenciar">Exponenciar</option>
+            <option value="residuo">Residuo</option>
+        </select>
+        <br>
+        <label for="operand1">Número 1:</label>
+        <input type="number" id="operand1" placeholder="Número 1">
+        <br>
+        <label for="operand2">Número 2:</label>
+        <input type="number" id="operand2" placeholder="Número 2">
+        <br>
+        <button onclick="performOperation()">Calcular</button>
+        <p id="calculationResult"></p>
+
+        <h2>Calculadora de Pedido</h2>
+        <label for="product">Seleccione un producto:</label>
+        <select id="product">
+            <option value="refresco">Refresco - S/1.00</option>
+            <option value="cerveza">Cerveza - S/2.50</option>
+            <option value="papitas">Papitas - S/5.00</option>
+        </select>
+        <br>
+        <label for="quantity">Cantidad:</label>
+        <input type="number" id="quantity" placeholder="Cantidad">
+        <br>
+        <button onclick="calculateTotal()">Calcular Total</button>
+        <p id="total"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
